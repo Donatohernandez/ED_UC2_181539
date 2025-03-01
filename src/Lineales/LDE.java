@@ -24,10 +24,19 @@ public class LDE {
         return false;
     }
     
+    /**
+     * Regresa la cantidad de elementos que conforma la lista 
+     * @return cantidad de elementos que conforma la lista 
+     */
     public int size(){
         return tam;
     }
     
+    /**
+     * Añade elementos al principio de la lista 
+     * @param val valor que se desea añadir a la lista
+     * @return verdadero si se agregó con exito el valor a la lista
+     */
     public boolean addLast(int val){
         //crear el nuevo nodo
         NodoD nN = new NodoD(val);
@@ -48,6 +57,9 @@ public class LDE {
         }
     }
     
+    /**
+     * Elimina el elemento al inicio de la lista
+     */
     public void removeFirst() {
         if (tam == 1) {
             inicial = null;
@@ -60,6 +72,11 @@ public class LDE {
         }
     }
     
+    /**
+     * busca el elemento dado por el parametro dentro de la lista
+     * @param valor valor dado por el parametro
+     * @return regresa verdadero si el valor está dentro de la lista
+     */
     public boolean contains(int valor){
         NodoD actual = inicial;
         boolean b= false;
@@ -75,6 +92,9 @@ public class LDE {
         return b;
     }
     
+    /**
+     * metodo que imprime la lista
+     */
     public void print(){
         NodoD actual = inicial;
         
