@@ -24,14 +24,15 @@ public class LES {
         return false;
     }
     
+    /**
+     * Regresa la cantidad de elementos que conforma la lista 
+     * @return cantidad de elementos que conforma la lista
+     */
     public int size(){
         return tam;
     }
     
-    /**
-     * Añade elementos al principio de la lista 
-     * @return 
-     */
+    
     public boolean addFirst(Nodo nN){
         if (this.isEmpty()) {
             inicial = nN;
@@ -45,6 +46,7 @@ public class LES {
         }
         return false;
     }
+    
     
      public boolean addLast(int val){
         //crear el nuevo nodo
@@ -105,6 +107,20 @@ public class LES {
         }
     }
     
+    public boolean contains(int valor){
+        Nodo actual = inicial;
+        boolean b= false;
+        
+        while (actual != null){
+            if (actual.getValor() == valor) {
+                b = true;
+                break;
+            } else {
+            actual = actual.getSiguiente();
+            }
+        } 
+        return b;
+    }
     
     
 }

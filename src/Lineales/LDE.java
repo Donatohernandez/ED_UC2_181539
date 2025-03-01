@@ -48,11 +48,38 @@ public class LDE {
         }
     }
     
+    public void removeFirst() {
+        if (tam == 1) {
+            inicial = null;
+            tam --;
+        }else if (tam > 1) {
+            inicial = inicial.getSig();
+            inicial.getAnt().setSig(null);
+            inicial.setAnt(null);
+            tam --;
+        }
+    }
+    
+    public boolean contains(int valor){
+        NodoD actual = inicial;
+        boolean b= false;
+        
+        while (actual != null){
+            if (actual.getValor() == valor) {
+                b = true;
+                break;
+            } else {
+            actual = actual.getSig();
+            }
+        } 
+        return b;
+    }
+    
     public void print(){
         NodoD actual = inicial;
         
         while (actual != null) {
-            System.out.print(actual.getValor() + "---> ");
+            System.out.print(actual.toString());
             actual = actual.getSig();
             }
     }

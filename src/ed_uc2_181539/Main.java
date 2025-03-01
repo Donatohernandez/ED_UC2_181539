@@ -16,10 +16,20 @@ public class Main {
         
         LDE l = new LDE();
         
+        l.addLast(0);
+        l.addLast(1);
+        l.addLast(2);
         l.addLast(3);
-        l.addLast(4);
-        l.addLast(6);
         l.print();
+        
+        System.out.println("");
+        l.removeFirst();
+        l.print();
+        
+        System.out.println("");
+        System.out.println(l.contains(2));
+        l.print();
+        
         
     }
     

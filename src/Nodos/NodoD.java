@@ -39,6 +39,13 @@ public class NodoD {
         this.ant = ant;
     }
 
+    @Override
+    public String toString() {
+        String antVal = (ant == null) ? "null" : String.valueOf(ant.getValor());
+        String sigVal = (sig == null) ? "null" : String.valueOf(sig.getValor());
+        return "<-- " + antVal + " | " + valor + " | " + sigVal + " -->";
+    }
+
     
     
 }
