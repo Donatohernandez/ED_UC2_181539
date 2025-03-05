@@ -53,7 +53,12 @@ public class LES {
         return false;
     }
     
-    
+    /**
+     * metodo que añade un valor dado al final de la lista
+     * @param val valor dado a añadir al final de la lista 
+     * @return confirmacion "true" si se añadió correctamente
+     * "false" en caso contrario
+     */
      public boolean addLast(int val){
         Nodo nN = new Nodo(val);
         if (tam == 0) {
@@ -79,6 +84,7 @@ public class LES {
         }
     }
     
+    
     public boolean removeFirst(){
         if (size() == 1) {
             inicial = null;
@@ -92,6 +98,7 @@ public class LES {
             return false;
         }
     }
+    
     
     public boolean removeLast(){
         if (size() == 1) {

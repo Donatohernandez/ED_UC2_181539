@@ -32,7 +32,7 @@ public class Nodo {
 
     @Override
     public String toString() {
-        return "Nodo-->" + "valor = " + valor + ", siguiente = " + siguiente + '}';
+        return "Nodo-->" +  valor + ", siguiente  " + siguiente + '}';
     }
     
     
