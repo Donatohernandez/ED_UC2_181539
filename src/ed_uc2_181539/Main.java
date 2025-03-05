@@ -37,7 +37,7 @@ public class Main {
 
         LES l1 = new LES();
         
-        System.out.println(l1.isEmpty());
+        System.out.println(l1.size());
         
         
         

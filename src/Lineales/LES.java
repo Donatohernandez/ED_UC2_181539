@@ -25,18 +25,21 @@ public class LES {
     }
     
     /**
-     * Regresa la cantidad de elementos que conforma la lista 
-     * @return cantidad de elementos que conforma la lista
+     * Regresa la cantidad de elementos que tiene la lista 
+     * @return cantidad de elementos que tiene la lista
      */
     public int size(){
         return tam;
     }
     
-    
+    /**
+     * metodo que añade un valor al principio de la lista
+     * @param val valor a añadir al principio de la lista 
+     * @return confirmacion "true" si se añadio correctamente
+     * "false" en caso contrario
+     */
     public boolean addFirst(int val){
-        
         Nodo nN = new Nodo(val);
-        
         if (this.isEmpty()) {
             inicial = nN;
             tam ++;
