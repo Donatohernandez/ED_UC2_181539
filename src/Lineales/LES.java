@@ -14,7 +14,7 @@ public class LES {
     
     /**
      * este metodo verifica si la lista está (true) vacía o no (false)
-     * @return  true si "inicial# es nulo, false en caso de que haya al menos un 
+     * @return  true si "inicial" es nulo, false en caso de que haya al menos un 
      * nodo en "inicial"
      */
     public boolean isEmpty(){
@@ -33,7 +33,10 @@ public class LES {
     }
     
     
-    public boolean addFirst(Nodo nN){
+    public boolean addFirst(int val){
+        
+        Nodo nN = new Nodo(val);
+        
         if (this.isEmpty()) {
             inicial = nN;
             tam ++;
@@ -122,5 +125,13 @@ public class LES {
         return b;
     }
     
+    /**
+     * metodo que imprime la lista
+     */
+    public void print(){
+        Nodo actual = inicial;
+        System.out.print(actual.toString());
+            
+    }
     
 }

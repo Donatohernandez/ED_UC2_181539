@@ -2,6 +2,7 @@
 package ed_uc2_181539;
 
 import Lineales.LDE;
+import Lineales.LES;
 
 /**
  *
@@ -14,21 +15,30 @@ public class Main {
      */
     public static void main(String[] args) {
         
-        LDE l = new LDE();
+//        LDE l = new LDE();
+//        
+//        
         
-        l.addLast(0);
-        l.addLast(1);
-        l.addLast(2);
-        l.addLast(3);
-        l.print();
+//        l.addLast(0);
+//        l.addLast(1);
+//        l.addLast(2);
+//        l.addLast(3);
+//        l.print();
+//        
+//        System.out.println("");
+//        l.removeFirst();
+//        l.print();
+//        
+//        System.out.println("");
+//        System.out.println(l.contains(2));
+//        l.print();
+
+
+
+        LES l1 = new LES();
         
-        System.out.println("");
-        l.removeFirst();
-        l.print();
+        System.out.println(l1.isEmpty());
         
-        System.out.println("");
-        System.out.println(l.contains(2));
-        l.print();
         
         
     }

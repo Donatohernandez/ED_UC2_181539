@@ -29,5 +29,12 @@ public class Nodo {
     public void setSiguiente(Nodo siguiente) {
         this.siguiente = siguiente;
     }
+
+    @Override
+    public String toString() {
+        return "Nodo-->" + "valor = " + valor + ", siguiente = " + siguiente + '}';
+    }
+    
+    
     
 }
