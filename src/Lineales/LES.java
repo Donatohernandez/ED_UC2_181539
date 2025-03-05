@@ -84,7 +84,11 @@ public class LES {
         }
     }
     
-    
+    /**
+     * Este metodo elimina el primer elemento de la lista
+     * @return confirmacion "true" si se eliminó el elemento
+     * correctamente "false" en caso contrario
+     */
     public boolean removeFirst(){
         if (size() == 1) {
             inicial = null;
