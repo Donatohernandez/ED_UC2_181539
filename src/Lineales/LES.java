@@ -126,6 +126,12 @@ public class LES {
         }
     }
     
+    /**
+     * busca el elemento dado por el parametro dentro de la lista 
+     * @param valor valor dado a buscar en la lista
+     * @return regrsa "true" si se encontró el elemento, "false"
+     * en caso contrario
+     */
     public boolean contains(int valor){
         Nodo actual = inicial;
         boolean b= false;

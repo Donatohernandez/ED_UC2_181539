@@ -36,12 +36,11 @@ public class Main {
 
 
         LES l1 = new LES();
-        l1.addLast(4);
-        l1.addLast(3);
+        l1.addFirst(4);
+        l1.addFirst(6);
         l1.print();
         System.out.println("");
-        l1.removeLast();
-        l1.print();
+        System.out.println(l1.contains(4));
     }
     
 }
