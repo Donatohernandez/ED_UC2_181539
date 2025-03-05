@@ -40,7 +40,7 @@ public class Main {
         l1.addLast(3);
         l1.print();
         System.out.println("");
-        l1.removeFirst();
+        l1.removeLast();
         l1.print();
     }
     

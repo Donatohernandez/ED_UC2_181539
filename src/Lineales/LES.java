@@ -103,7 +103,11 @@ public class LES {
         }
     }
     
-    
+    /**
+     * Este metodo elimina el ultimo elemento de la lista
+     * @return confirmacion "true" si se eliminó el elemento
+     * correctamente "false" en caso contrario
+     */
     public boolean removeLast(){
         if (size() == 1) {
             inicial = null;
