@@ -33,9 +33,9 @@ public class LES {
     }
     
     /**
-     * metodo que añade un valor al principio de la lista
-     * @param val valor a añadir al principio de la lista 
-     * @return confirmacion "true" si se añadio correctamente
+     * metodo que añade un valor dado al principio de la lista
+     * @param val valor dado a añadir al principio de la lista 
+     * @return confirmacion "true" si se añadió correctamente
      * "false" en caso contrario
      */
     public boolean addFirst(int val){
@@ -55,9 +55,7 @@ public class LES {
     
     
      public boolean addLast(int val){
-        //crear el nuevo nodo
         Nodo nN = new Nodo(val);
-        
         if (tam == 0) {
             inicial = nN;
             tam ++;
