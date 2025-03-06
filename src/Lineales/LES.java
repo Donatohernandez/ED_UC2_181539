@@ -147,13 +147,38 @@ public class LES {
         return b;
     }
     
+    public int getElement(){
+        return 0;
+    }
+    
+    /**
+     * este metodo elimina todos los elementos de la lista
+     * @return "true" si se borraron todos los elementos de la 
+     * lista, "false" en caso contrario
+     */
+    public boolean clear(){
+        if (size() == 1) {
+            inicial = null;
+            tam = 0;
+            return true;
+        } else if (size() > 1) {
+            Nodo nAux = inicial;
+            while (nAux.getSiguiente() != null) {
+                nAux.setSiguiente(null);
+            }
+            inicial = null;
+            tam = 0;
+            return true;
+        } 
+        return false;
+    }
+    
     /**
      * metodo que imprime la lista
      */
     public void print(){
         Nodo actual = inicial;
-        System.out.print(actual.toString());
-            
+        System.out.print(actual.toString());  
     }
-    
+
 }

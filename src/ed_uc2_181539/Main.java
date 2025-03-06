@@ -36,11 +36,19 @@ public class Main {
 
 
         LES l1 = new LES();
-        l1.addFirst(4);
+        l1.addFirst(9);
         l1.addFirst(6);
+        l1.addFirst(1);
+        l1.addFirst(3);
         l1.print();
         System.out.println("");
-        System.out.println(l1.contains(4));
+        System.out.print(l1.clear());
+        System.out.println(" verdadero del metodo clear");
+        System.out.print(l1.isEmpty());
+        System.out.println(" verdadero del metodo isEmpty");
+        System.out.println("para verificar que la lista esta vacia");
+        
+        
     }
     
 }
