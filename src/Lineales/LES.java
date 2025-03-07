@@ -147,7 +147,21 @@ public class LES {
         return b;
     }
     
-    public int getElement(){
+    /**
+     * Metodo que regresa un elemento de la lista dado por el parametro
+     * @param valor elemento a obtener dentro de la lista
+     * @return el elemento buscado dentro de la lista
+     */
+    public int getElement(int valor){
+         Nodo actual = inicial;
+         
+         while (actual != null){
+            if (actual.getValor() == valor) {
+                return valor;
+            } else {
+            actual = actual.getSiguiente();
+            }
+        } 
         return 0;
     }
     
