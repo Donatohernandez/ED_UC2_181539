@@ -5,7 +5,7 @@ import Nodos.NodoD;
 
 /**
  *
- * @author manue
+ * @author manuel donato 181539
  */
 public class LDE {
     
@@ -30,6 +30,29 @@ public class LDE {
      */
     public int size(){
         return tam;
+    }
+    
+    /**
+     * metodo que añade un valor dado al principio de la lista
+     * @param val valor dado a añadir al principio de la lista 
+     * @return confirmacion "true" si se añadió correctamente
+     * "false" en caso contrario
+     */
+    public boolean addFirst(int val) {
+        NodoD nN = new NodoD(val);
+        
+        if (tam == 0) {
+            inicial = nN;
+            tam ++;
+            return true;
+        } else if (tam > 0) {
+            nN.setSig(inicial);
+            inicial.setAnt(nN);
+            inicial = nN;
+            tam ++;
+            return true;
+        }
+        return false;
     }
     
     /**
@@ -73,6 +96,23 @@ public class LDE {
     }
     
     /**
+     * Elimina el elemento al final de la lista
+     */
+    public void removeLast() {
+        if (tam == 1) {
+            inicial = null;
+            tam --;
+        } else if (tam > 1){
+            NodoD actual = inicial;
+            while (actual.getSig().getSig() != null) {
+                actual = actual.getSig();
+            }
+            actual.setSig(null);
+            tam --;
+        }
+    }
+    
+    /**
      * busca el elemento dado por el parametro dentro de la lista
      * @param valor valor dado por el parametro
      * @return regresa verdadero si el valor está dentro de la lista
@@ -93,6 +133,38 @@ public class LDE {
     }
     
     /**
+     * Metodo que regresa un elemento de la lista dado por el parametro
+     * @param valor elemento a obtener dentro de la lista
+     * @return el elemento buscado dentro de la lista
+     */
+    public int getElement(int valor) {
+        NodoD actual = inicial;
+        
+        while (actual != null){
+            if (actual.getValor() == valor) {
+                return valor;
+            } else {
+            actual = actual.getSig();
+            }
+        } 
+        return -1;
+    }
+    
+    /**
+     * este metodo elimina todos los elementos de la lista
+     * @return "true" si se borraron todos los elementos de la 
+     * lista, "false" en caso contrario
+     */
+    public boolean clear() {
+        if (inicial == null) {
+            return false; 
+        }
+        inicial = null;
+        tam = 0; 
+    return true;
+    }
+    
+    /**
      * metodo que imprime la lista
      */
     public void print(){
@@ -103,10 +175,5 @@ public class LDE {
             actual = actual.getSig();
             }
     }
-    
-    
-    
-    
-    
     
 }

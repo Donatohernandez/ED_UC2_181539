@@ -3,7 +3,7 @@ package Nodos;
 
 /**
  *
- * @author manue
+ * @author manuel donato 181539
  */
 public class NodoD {
     
@@ -46,6 +46,4 @@ public class NodoD {
         return "<-- " + antVal + " | " + valor + " | " + sigVal + " -->";
     }
 
-    
-    
 }

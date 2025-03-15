@@ -5,7 +5,7 @@ import Nodos.Nodo;
 
 /**
  *
- * @author manue
+ * @author manuel donato 181539
  */
 public class LES {
     
@@ -162,7 +162,7 @@ public class LES {
             actual = actual.getSiguiente();
             }
         } 
-        return 0;
+        return -1;
     }
     
     /**
