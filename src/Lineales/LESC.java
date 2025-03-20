@@ -75,9 +75,9 @@ public class LESC {
             while (actual.getSiguiente() != inicial) {
                 actual = actual.getSiguiente();
             }
-                 actual.setSiguiente(nN);
-                 nN.setSiguiente(inicial);
-                 tam ++;
+                actual.setSiguiente(nN);
+                nN.setSiguiente(inicial);
+                tam ++;
         }
     }
     

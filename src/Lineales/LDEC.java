@@ -86,7 +86,12 @@ public class LDEC {
     }
     
     public void removeFirst() {
-        
+        if (tam == 1) {
+            inicial = null;
+            tam = 0;
+        } else {
+            
+        }
     }
 
     /**

@@ -40,7 +40,6 @@ public class LDE {
      */
     public boolean addFirst(int val) {
         NodoD nN = new NodoD(val);
-        
         if (tam == 0) {
             inicial = nN;
             tam ++;
@@ -61,9 +60,7 @@ public class LDE {
      * @return verdadero si se agregó con exito el valor a la lista
      */
     public boolean addLast(int val){
-        //crear el nuevo nodo
         NodoD nN = new NodoD(val);
-        
         if (tam == 0) {
             inicial = nN;
             tam ++;

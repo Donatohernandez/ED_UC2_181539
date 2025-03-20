@@ -1,6 +1,7 @@
 
 package ed_uc2_181539;
 
+import Lineales.LDE;
 import Lineales.LDEC;
 import Lineales.LES;
 import Lineales.LESC;
@@ -18,14 +19,33 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        LESC l1 = new LESC(new Nodo(10));
-        
-        LDEC numeros = new LDEC(new NodoD(10));
-        
-        numeros.addFirst(new NodoD(20));
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        LDE l = new LDE();
+        
+        l.addLast(5);
+        l.addLast(1);
+        l.print();
+        System.out.println("");
+        l.removeLast();
+        l.print();
+        System.out.println("");
+        
+    
     }
     
 }
