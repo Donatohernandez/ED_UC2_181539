@@ -98,7 +98,7 @@ public class LDE {
     public void removeLast() {
         if (tam == 1) {
             inicial = null;
-            tam --;
+            tam = 0;
         } else if (tam > 1){
             NodoD actual = inicial;
             while (actual.getSig().getSig() != null) {
@@ -117,7 +117,6 @@ public class LDE {
     public boolean contains(int valor){
         NodoD actual = inicial;
         boolean b= false;
-        
         while (actual != null){
             if (actual.getValor() == valor) {
                 b = true;
@@ -136,7 +135,6 @@ public class LDE {
      */
     public int getElement(int valor) {
         NodoD actual = inicial;
-        
         while (actual != null){
             if (actual.getValor() == valor) {
                 return valor;
@@ -166,7 +164,6 @@ public class LDE {
      */
     public void print(){
         NodoD actual = inicial;
-        
         while (actual != null) {
             System.out.print(actual.toString());
             actual = actual.getSig();

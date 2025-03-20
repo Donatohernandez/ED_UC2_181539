@@ -18,34 +18,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        LDE l = new LDE();
-        
-        l.addLast(5);
-        l.addLast(1);
-        l.print();
-        System.out.println("");
-        l.removeLast();
-        l.print();
-        System.out.println("");
-        
-    
     }
     
 }

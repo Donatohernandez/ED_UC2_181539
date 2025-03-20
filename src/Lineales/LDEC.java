@@ -51,7 +51,7 @@ public class LDEC {
             inicial.setAnt(nN);
             inicial = nN;
             tam ++;
-        } else if (tam > 1) {
+        } else {
             nN.setSig(inicial);
             nN.setAnt(inicial.getAnt());
             inicial.getAnt().setSig(nN);
@@ -73,24 +73,29 @@ public class LDEC {
             inicial.setAnt(nN);
             tam ++;
         } else {
-            NodoD actual = inicial;
-            while (actual.getSig() != inicial) {
-                actual = actual.getSig();
-            }
+            NodoD ultimo = inicial.getAnt();
             nN.setSig(inicial);
-            nN.setAnt(actual);
-            actual.setSig(nN);
+            nN.setAnt(ultimo);
+            ultimo.setSig(nN);
             inicial.setAnt(nN);
             tam ++;
         }
     }
     
+    /**
+     * metodo que remueve el primer nodo de la lista
+     */
     public void removeFirst() {
         if (tam == 1) {
             inicial = null;
             tam = 0;
         } else {
-            
+            NodoD ultimo = inicial.getAnt(); 
+            NodoD nuevoInicial = inicial.getSig(); 
+            ultimo.setSig(nuevoInicial); 
+            nuevoInicial.setAnt(ultimo); 
+            inicial = nuevoInicial; 
+            tam--;
         }
     }
 
@@ -116,7 +121,6 @@ public class LDEC {
     public boolean contains(int valor){
         NodoD actual = inicial;
         boolean b= false;
-        
         while (actual != null){
             if (actual.getValor() == valor) {
                 b = true;
@@ -135,7 +139,6 @@ public class LDEC {
      */
     public int getElement(int valor) {
         NodoD actual = inicial;
-        
         while (actual != null){
             if (actual.getValor() == valor) {
                 return valor;
@@ -164,12 +167,13 @@ public class LDEC {
      * metodo que imprime la lista
      */
     public void print(){
+        if (inicial != null) {
         NodoD actual = inicial;
-        
-        while (actual != null) {
-            System.out.print(actual.toString());
+        do {
+            System.out.print(actual.toString() + " ");
             actual = actual.getSig();
-            }
+        } while (actual != inicial);
+        }
     }
     
 }

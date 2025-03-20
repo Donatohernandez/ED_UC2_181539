@@ -108,10 +108,9 @@ public class LESC {
             tam = 0;
         } else if (tam > 1) {
             Nodo aux = inicial;
-            while (aux.getSiguiente() != inicial) {
+            while (aux.getSiguiente().getSiguiente() != inicial) {
                 aux = aux.getSiguiente();
             }
-            aux.setSiguiente(null);
             aux.setSiguiente(inicial);
             tam --;
         }
@@ -126,7 +125,6 @@ public class LESC {
     public boolean contains(int valor){
         Nodo actual = inicial;
         boolean b= false;
-        
         while (actual != null){
             if (actual.getValor() == valor) {
                 b = true;
@@ -145,7 +143,6 @@ public class LESC {
      */
     public int getElement(int valor){
          Nodo actual = inicial;
-         
          while (actual != null){
             if (actual.getValor() == valor) {
                 return valor;
@@ -171,8 +168,16 @@ public class LESC {
      * metodo que imprime la lista
      */
     public void print(){
+        if (inicial == null) {
+            System.out.println("Lista vacia");
+            return;
+        } 
         Nodo actual = inicial;
-        System.out.print(actual.toString());  
+        do {
+            System.out.print(actual.toString() + " -> ");
+            actual = actual.getSiguiente();
+        } while (actual != inicial);
+        System.out.println("(vuelve al inicio)");
     }
     
 }
