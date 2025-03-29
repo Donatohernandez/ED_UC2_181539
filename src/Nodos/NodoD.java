@@ -38,7 +38,7 @@ public class NodoD {
     public void setAnt(NodoD ant) {
         this.ant = ant;
     }
-
+    
     @Override
     public String toString() {
         String antVal = (ant == null) ? "null" : String.valueOf(ant.getValor());
