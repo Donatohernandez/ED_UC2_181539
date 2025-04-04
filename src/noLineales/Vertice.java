@@ -1,25 +1,47 @@
 
 package noLineales;
 
-import Lineales.LES;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  *
  * @author manuel donato 181539
  */
-public class Vertice {
+public class Vertice <T> {
     
-    public int valor;
-    public ArrayList<Vertice> vecinos;
-    
-    public Vertice(int val) {
-        this.valor = val;
-        vecinos = new ArrayList<Vertice>();
+    private T valor;
+
+    public T getValor() {
+        return valor;
+    }
+
+    public void setValor(T valor) {
+        this.valor = valor;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + Objects.hashCode(this.valor);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vertice<?> other = (Vertice<?>) obj;
+        return Objects.equals(this.valor, other.valor);
     }
     
-    public void agregarVecino(Vertice nV) {
-        vecinos.add(nV);
-    }
+    
     
 }
